@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #707070;
+}
+
+/*========== SESSAO HEADER ==========*/
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 50px;
+  background: #ffff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 35px rgb(0, 0, 0, 0.1);
+}
+
+.container .left_side {
+  position: relative;
+  padding: 1.5rem;
+  background: #003147;
+}
+
+.profiletext {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #707070;
+}
+
+.profiletext .imgbx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profiletext .imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profiletext h2 {
+  color: #ffff;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-align: 600;
+  line-height: 1.4em;
+}
+
+.profiletext h2 span {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/*========== SESSAO CONTATO ==========*/
+
+.contactinfo {
+  padding: 1rem 3rem 0 0;
+}
+
+.title {
+  color: #ffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contactinfo ul {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #707070;
+}
+
+.contactinfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 0.5rem 0;
+}
+
+.contactinfo ul li .icon {
+  display: inline-block;
+  width: 2rem;
+  font-size: 1rem;
+  color: #03a9f4;
+  cursor: pointer;
+}
+.contactinfo ul li span {
+  display: grid;
+  color: #ffff;
+}
+
+/*------ Educação -----*/
+
+.contactinfo.education li {
+  margin-bottom: 1rem;
+}
+
+.contactinfo.education h5 {
+  color: #03a9f4;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.contactinfo.education h4:nth-child(2) {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.contactinfo.education h4 {
+  color: #b9b9b9;
+  font-size: 1rem;
+}
+
+/*------ Linguagem -----*/
+.languages {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.contactinfo.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #ffffff;
+  display: block;
+  margin-top: 5px;
+}
+
+.contactinfo.language .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+
+/*------ lado esquerdo -----*/
+
+.container .right-side {
+  position: relative;
+  padding: 2.5rem;
+  background: #ffff;
+}
+
+.about {
+  margin-bottom: 3rem;
+}
+
+.title2 {
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #003147;
+}
+
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 2.5rem 0;
+}
+
+.about .box .year_company {
+  min-width: 9rem;
+}
+
+.about .box .year_company h5 {
+  text-transform: uppercase;
+  padding: 0.3;
+  color: #003147;
+  font-weight: 800;
+}
+
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 1rem;
+}
+
+/*----------------------------*/
+
+.skills .box {
+  position: relative;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills .box h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-weight: 500;
+}
+
+.skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #dbdbdb;
+}
+
+.skills .box .percent div {
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #2a7da2;
+}
+
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.interest ul li {
+  list-style: none;
+  color: #003147;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.interest ul li .fa {
+  color: #03a9f4;
+  font-size: 1rem;
+  width: 2rem;
+}
+
+/*------ moble -----*/
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: relative(1, 1fr);
+  }
+  .interest ul {
+    grid-template-columns: relative(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about .box {
+    flex-direction: column;
+  }
+  .about .box .year_company {
+    margin-bottom: 5px;
+  }
+  .interest ul {
+    grid-template-columns: relative(1, 1fr);
+  }
+  .skills .box {
+    grid-template-columns: relative(1, 1fr);
+  }
+}
